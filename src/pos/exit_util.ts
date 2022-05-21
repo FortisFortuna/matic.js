@@ -39,6 +39,9 @@ export class ExitUtil {
                 logIndex = receipt.logs.findIndex(
                     log =>
                         log.topics[0].toLowerCase() === logEventSig.toLowerCase() &&
+                        // log.address.toLowerCase() === "0x000000000000000000000000104592a158490a9228070E0A8e5343B499e125D0" && // polyFRAX
+                        // log.address.toLowerCase() === "0x0000000000000000000000003e121107F6F22DA4911079845a470757aF4e1A1b" && // polyFXS
+                        log.topics[1].toLowerCase() === '0x0000000000000000000000006e1a844afff1aa2a8ba3127db83088e196187110' && // from the CCBridger
                         log.topics[2].toLowerCase() === '0x0000000000000000000000000000000000000000000000000000000000000000'
                 );
                 break;
@@ -229,7 +232,7 @@ export class ExitUtil {
                 logEventSig, receipt
             );
             // step 6 - encode payload, convert into hex
-            return this.encodePayload_(
+            const rlpPayload = this.encodePayload_(
                 rootBlockInfo.headerBlockNumber.toNumber(),
                 blockProof,
                 txBlockNumber,
@@ -241,6 +244,10 @@ export class ExitUtil {
                 receiptProof.path,
                 logIndex
             );
+
+            console.log("rlpPayload: ", rlpPayload);
+
+            return rlpPayload;
         });
     }
 
