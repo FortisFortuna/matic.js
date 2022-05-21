@@ -6,6 +6,8 @@
 ![GitHub](https://img.shields.io/github/license/maticnetwork/matic.js)
 [![TEST](https://github.com/maticnetwork/matic.js/actions/workflows/test.yml/badge.svg)](https://github.com/maticnetwork/matic.js/actions/workflows/test.yml)
 
+FRAX EDITED
+
 This repository contains the `maticjs` client library. `maticjs` makes it easy for developers, who may not be deeply familiar with smart contract development, to interact with the various components of Matic Network.
 
 This library will help developers to move assets from Ethereum chain to Matic chain, and withdraw from Matic to Ethereum using fraud proofs.
