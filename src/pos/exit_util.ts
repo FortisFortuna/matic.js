@@ -38,8 +38,8 @@ export class ExitUtil {
             case '0xf94915c6d1fd521cee85359239227480c7e8776d7caf1fc3bacad5c269b66a14':
                 logIndex = receipt.logs.findIndex(
                     log =>
-                        log.address.toLowerCase() === "0x104592a158490a9228070e0a8e5343b499e125d0" && // polyFRAX.toLowerCase()
-                        // log.address.toLowerCase() === "0xe121107f6f22da4911079845a470757af4e1a1b" && // polyFXS.toLowerCase()
+                        // log.address.toLowerCase() === "0x104592a158490a9228070e0a8e5343b499e125d0" && // polyFRAX.toLowerCase()
+                        log.address.toLowerCase() === "0x3e121107f6f22da4911079845a470757af4e1a1b" && // polyFXS.toLowerCase()
                         log.topics[0].toLowerCase() === logEventSig.toLowerCase() &&
                         log.topics[1].toLowerCase() === '0x0000000000000000000000006e1a844afff1aa2a8ba3127db83088e196187110' && // from the CCBridger
                         log.topics[2].toLowerCase() === '0x0000000000000000000000000000000000000000000000000000000000000000'

@@ -40,7 +40,7 @@ const execute = async () => {
   });
   console.log("init called");
 
-  const exitCalldata = await posClient.erc20(pos.child.erc20, true).withdrawExit("0x94d27db2778c93ea26e9bf96bafa0eb9be4d6d34947e3250e25a2e35984d0ed5", { from, encodeAbi: true });
+  const exitCalldata = await posClient.erc20(pos.child.erc20, true).withdrawExit("0x21443a8284e039c2d8d6f32f6ec10f1f6892675586f9d8060cdb11e59b42a2ad", { from, encodeAbi: true });
 	console.log("exitCalldata: ", exitCalldata);
 }
 
